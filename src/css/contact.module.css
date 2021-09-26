@@ -1,0 +1,36 @@
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textBox {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.textArea {
+    resize: none;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formButtons button {
+    width: 45%;
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    border: 1px solid #dedede; 
+}
+
+.formButtons button:hover {
+    cursor: pointer;
+}
