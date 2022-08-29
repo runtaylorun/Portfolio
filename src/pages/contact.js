@@ -6,8 +6,13 @@ const ContactPage = () => {
     return (
         <>
             <NavBar />
-            <main style={{ display: 'flex', justifyContent: 'space-evenly', height: '100vh', backgroundColor: 'hsl(0, 0%, 98%)' }}>
-                <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%', }}>
+            <main style={{ display: 'flex', justifyContent: 'space-evenly', height: '90vh' }}>
+                <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <h2 style={{ fontSize: '48px', marginBottom: 0 }}>Send a Message</h2>
+                        <hr style={{ borderTop: '1px solid #8a8a8a', width: '75%' }} />
+                        <p style={{ marginTop: 0, fontSize: 13, color: '#8a8a8a' }}>Have something to discuss? Let me know and i'll respond within a few days.</p>
+                    </div>
                     <form style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', height: '75%' }}>
                         <div className={classes.inputContainer}>
                             <input style={{ width: '35%' }} className={classes.textBox} placeholder='First Name' type="text" />
@@ -19,17 +24,15 @@ const ContactPage = () => {
                         <div className={classes.inputContainer}>
                             <textarea className={classes.textArea} placeholder='Leave a message...' type="text" />
                         </div>
+                        <div className={classes.inputContainer}>
+                            <input className={classes.textBox} placeholder='5 + 5 = ?' type="text" />
+                        </div>
                         <div className={classes.formButtons}>
-                            <button>Submit</button>
+                            <button style={{ backgroundColor: 'black', color: 'white' }}>Submit</button>
                             <button type='reset'>Clear</button>
                         </div>
                     </form>
                 </section>
-                <aside style={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
-                    <p>Github: runtalyorundldldld....</p>
-                    <p>LinkedIn: ruintalykafd;al;d....</p>
-                    <p>Instagram: taylormills1903</p>
-                </aside>
             </main>
         </>
     )
