@@ -1,0 +1,48 @@
+.page {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    width: 0;
+    color: white;
+    font-size: 36px;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 4.5s steps(30, end),
+        blink-typer .75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0
+    }
+
+    20%,
+    75% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-typer {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
