@@ -1,0 +1,76 @@
+.page {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    grid-template-rows: repeat(2, minmax(100px, 200px));
+    gap: 15px;
+    place-items: center;
+}
+
+.gridHeader {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    margin: 0 auto;
+    width: 40%;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5%;
+}
+
+.gridFooter {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 5%;
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.gridFooter span {
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(100px, 200px));
+        grid-template-rows: repeat(3, minmax(100px, 200px))
+    }
+}

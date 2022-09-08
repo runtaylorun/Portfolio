@@ -1,22 +1,40 @@
-import * as React from "react"
-import logo from '../images/7218.jpg'
-import NavBar from '../components/NavBar'
-import IconBar from '../components/IconBar'
-import * as classes from '../css/index.module.css'
+import React, { useState } from "react"
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import * as classes from '../css/home.module.css'
+import '../css/global.css'
 
 const HomePage = () => {
+
+  const [isFocused, setIsFocused] = useState(false)
+
+  const mouseOverHandler = () => {
+    setIsFocused(true)
+  }
+
+  const mouseOutHandler = () => {
+    setIsFocused(false)
+  }
+
   return (
-    <>
-      <NavBar />
-      <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '90vh' }}>
-        <img src={logo} className={classes.roundedImage} alt='self-portrait' />
-        <div>
-          <h2 style={{ fontSize: '48px', marginBottom: 0, textAlign: 'center' }}>Hey There!</h2>
-          <p>My name is Taylor and welcome to my portfolio.</p>
-        </div>
-        <IconBar />
-      </main>
-    </>
+    <div className={classes.page}>
+      <div className={`blurContainer ${isFocused && 'blur'}`}></div>
+      <div className={classes.centerPiece}>
+        <h1>Taylor Mills</h1>
+        <h2>Software Engineer</h2>
+      </div>
+      <div onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler} className={classes.linkContainer}>
+        <AniLink swipe direction="right" to="/projects">Projects</AniLink>
+      </div>
+      <div onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler} className={classes.linkContainer}>
+        <AniLink swipe direction="left" to="/experience">Experience</AniLink>
+      </div>
+      <div onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler} className={classes.linkContainer}>
+        <AniLink swipe direction="right" to="/contact">Contact</AniLink>
+      </div>
+      <div onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler} className={classes.linkContainer}>
+        <AniLink swipe direction="left" to="/about">About</AniLink>
+      </div>
+    </div>
   )
 }
 

@@ -1,0 +1,47 @@
+.page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: black;
+    justify-items: center;
+    align-items: center;
+}
+
+.centerPiece {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -55px;
+    margin-left: -76px;
+}
+
+.centerPiece h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.centerPiece h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.linkContainer {
+    transition: transform 0.2s;
+}
+
+.linkContainer:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.linkContainer a {
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.center {
+    animation: moveToCenter 2s;
+}
+
+@keyframes moveToCenter {}
