@@ -1,6 +1,5 @@
 * {
     font-family: 'roboto';
-    color: white;
 }
 
 body {
@@ -8,24 +7,29 @@ body {
 }
 
 .leftArrow {
+    color: white;
     position: fixed;
     font-size: 50px;
     top: 50%;
     left: 5%;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 .rightArrow {
+    color: white;
     position: fixed;
     font-size: 50px;
     top: 50%;
     left: 90%;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 .leftArrow:hover,
 .rightArrow:hover {
     cursor: pointer;
+    color: hsl(0, 0%, 70%);
 }
 
 .blurContainer {
@@ -39,4 +43,5 @@ body {
 
 .blur {
     backdrop-filter: blur(0.5rem) opacity(1);
+    pointer-events: all;
 }
