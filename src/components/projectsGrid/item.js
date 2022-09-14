@@ -3,10 +3,12 @@ import * as classes from '../../css/projects.module.css'
 
 const Item = ({ children, title, clickHandler, isOpen }) => {
     return (
-        <div onClick={clickHandler} className={classes.item}>
-            <h2 style={{ color: 'inherit' }}>{title}</h2>
-            {isOpen && children}
-        </div>
+        <>
+            {isOpen && <div className={classes.modal}>{children}</div>}
+            <div onClick={clickHandler} className={classes.item}>
+                <h2 style={{ color: 'inherit' }}>{title}</h2>
+            </div>
+        </>
     )
 }
 
