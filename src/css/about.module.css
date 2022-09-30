@@ -5,3 +5,25 @@
     align-items: center;
     background-color: black;
 }
+
+.aboutSection {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutSection p {
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+.aboutSection h2 {
+    display: inline;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.aboutSection div {
+    color: black;
+    background-color: white;
+}
