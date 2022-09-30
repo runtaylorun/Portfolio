@@ -17,13 +17,31 @@
 }
 
 .centerPiece h1 {
+    color: white;
     font-size: 30px;
     text-align: center;
 }
 
 .centerPiece h2 {
+    color: white;
     font-size: 16px;
     text-align: center;
+}
+
+.icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons svg {
+    color: white;
+    transition: transform 0.5s;
+}
+
+.icons svg:hover {
+    cursor: pointer;
+    transform: scale(1.3);
 }
 
 .linkContainer {
@@ -36,6 +54,7 @@
 }
 
 .linkContainer a {
+    color: white;
     font-size: 40px;
     text-decoration: none;
 }
